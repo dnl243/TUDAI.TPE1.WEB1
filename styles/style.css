@@ -1,0 +1,95 @@
+/* propiedades generales */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #ddd;
+}
+body {
+  background-color: #222;
+  font-family: "Bebas Neue", Courier, cursive;
+  color: #ddd;
+}
+/* header */
+.cabecera {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw;
+  position: fixed;
+}
+/* nombre de página */
+h1 {
+  font-size: 15vw;
+}
+.spanH1 {
+  color: #7989da;
+}
+/* ícono menu */
+.menuIcono {
+  font-size: 15vw;
+  margin-right: 3vw;
+}
+.menuIcono:hover {
+  text-shadow: 0px 0px 15px #ddd;
+  cursor: pointer;
+}
+/* menu desplegable */
+.menuDesplegable {
+  font-size: 10vw;
+  padding: 3vw;
+  position: fixed;
+  top: 25vw;
+}
+.oculto {
+  display: none;
+}
+.menuDesplegable li a:hover {
+  color: #7989da;
+  text-shadow: 0px 0px 15px #7989da;
+}
+/* main */
+.peliPrincipal {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://cdn.colombia.com/sdi/2022/01/14/spider-man-no-way-home-nuevo-poster-mes-de-estreno-marvel-studios-sony-987506.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 15vw;
+  gap: 3vw;
+}
+.contSecundario h3, h4{
+  color: #7989daaa;
+  padding: 2vw 10vw;
+  border-bottom: solid 3px #7989da55;
+}
+.contGaleria{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.contPeli{
+  text-align: center;
+  width: 45vw;
+}
+.contPeli img{
+  width: 45vw;
+}
+/* footer */
+.pieDePagina {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
