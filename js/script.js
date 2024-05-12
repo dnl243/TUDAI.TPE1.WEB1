@@ -1,15 +1,13 @@
 "use strict";
 // icono menu
-const menuIcono = document.querySelector(".menuIcono");
+const menuIcono = document.querySelector(".menuIcono").addEventListener("click", desplegar);
 const menuDesplegable = document.querySelector(".menuDesplegable");
-
 
 function desplegar(){
   menuDesplegable.classList.toggle("oculto")
   menuIcono.classList.toggle("bi-list");//ícono "hamburguesa"
   menuIcono.classList.toggle("bi-x");//ícono "x"
 };
-menuIcono.addEventListener("click", desplegar);
 
 //ocultar desplegable al seleccionar opción
 document.querySelectorAll(".menuDesplegable li a").forEach(e =>
