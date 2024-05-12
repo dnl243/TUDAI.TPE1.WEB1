@@ -1,7 +1,9 @@
 "use strict";
 // icono menu
-const menuIcono = document.querySelector(".menuIcono").addEventListener("click", desplegar);
+const menuIcono = document.querySelector(".menuIcono");
 const menuDesplegable = document.querySelector(".menuDesplegable");
+
+menuIcono.addEventListener("click", desplegar);
 
 function desplegar(){
   menuDesplegable.classList.toggle("oculto")
