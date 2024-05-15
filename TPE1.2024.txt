@@ -1,0 +1,63 @@
+Trabajo Práctico Especial 2024
+Parte I
+Consigna
+Se debe desarrollar un sitio web con una temática a libre elección con las tecnologías vistas en la asignatura:
+
+1-El sitio debe ser Responsive. Diseñado e implementado como “mobile first” es requisito indispensable. 
+  a-Como mínimo se debe soportar celular y escritorio.
+  b-El menú debe ser responsive. En la vista de celular debe estar oculto y poder desplegarse o similar.
+  c-La tabla es tolerable que no sea responsive.
+  d-Se puede usar Flexbox o GRID, o ambos.
+2-Se debe utilizar HTML semántica
+3-Se debe crear un formulario de contacto con un captcha para comprobar que el usuario es un humano.
+4-Se debe incluir un screenshot (captura de pantalla) del sitio web en la raíz del sitio.
+
+Detalle de Requerimientos 
+
+El sitio web debe tener como mínimo:
+1-tres archivos HTML (3 páginas contando el Home)
+2-una barra o menú de navegación, que permita navegar entre las páginas del sitio
+3-una lista ordenada o desordenada (diferente a la de navegación)
+4-una tabla
+5-un formulario de contacto
+6-una imágen
+7-validación por Javascript del formulario con un captcha* (ver en Consideraciones)
+
+Opcionales
+
+1-Los datos a introducir en el captcha en Javascript se generan al azar como texto o como imágenes (Item opcional)
+2-Modo Oscuro / Modo Claro, debe existir la posibilidad de cambiar los colores del sitio para ver con distinto color de fondo/letra. (Item opcional)
+
+Consideraciones Importantes
+
+>Identidad visual unificada: Al navegar  el sitio web el usuario debe percibir que siempre se encuentra en el mismo sitio. Utilizar una misma línea gráfica, en general mismo header, etc.
+>Tamaño del sitio total comprimido menor a 5Mb: por restricciones de conectividad y de Moodle el sitio debe ser lo más liviano posible, esto se logra usando imágenes que no sean demasiado pesadas y no subiendo videos.
+>*Validación Javascript del formulario: El formulario debe tener un campo tipo captcha para comprobar que el usuario es un humano. Para esto la página debe mostrar un texto o número (o algo similar) y pedir introducirlo en el formulario. En caso que no coincida con el valor mostrado por pantalla se debe rechazar mostrando un mensaje que no existe coincidencia.
+  .El formulario no debe enviarse a ningún lugar
+  .El resultado del captcha (correcto/incorrecto) debe verse en el sitio web (no usar alert)
+  .NO es usar el captcha de Google o Recaptcha, es simularlo de una forma sencilla.
+
+No está permitido usar:
+>Bootstrap, Tailwind u otro framework responsive
+>Frameworks o librerias JS.
+
+
+ENTREGA - MOODLE
+La presentación es de acuerdo a los grupos definidos en la planilla correspondiente. Todos los grupos deben tener el contenido definido en la planilla de trabajos y estar en el lugar acordado. Los grupos pueden ser hasta 2 personas como máximo
+
+Planilla Comisiones A
+Planilla Comisiones B
+Planilla Comisiones C
+
+Planilla Sede RAUCH 
+
+El proyecto debe entregarse y subirse como archivo comprimido con nombre según número (Columna “N° Trab”) de grupo, comisión  y nombres y subirlo a la tarea de entrega de MOODLE, un solo trabajo por grupo. 
+Ejemplo 1 (“C009 - C1 Jose Perez y Juan García”), ambos en comisión C1
+Ejemplo 2 (“C010 - C1 Raul Gomez y C2 Fernando Hernandez”), en comisiones C1 y C2 
+
+La entrega del trabajo se hace por Moodle, ingresando en la sección  “Entrega Primer Parte”, que aparecerá próximo a la fecha .
+
+
+Fecha de entrega: 
+
+TANDIL - Miércoles 22 de mayo, 23.59 hs
