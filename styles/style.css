@@ -96,7 +96,6 @@ h4 {
 .contPeli img {
   width: 45vw;
   height: 65vw;
-  margin: 0 10px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
@@ -111,8 +110,7 @@ h4 {
   justify-content: space-between;
   padding: 2vw 15vw 2vw 15vw;
 }
-.txtOculto1,
-.txtOculto2 {
+.txtOculto {
   text-align: justify;
   padding: 0 10vw 2vw 10vw;
 }
@@ -128,57 +126,57 @@ h4 {
 /* infoPelis */
 .contInfoPelis{
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 .peliculaContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 13vw 1vw 1vw 1vw;
+  padding: 5vw;
 }
 .portadaPelicula {
   width: 100%;
   max-width: 550px;
-  margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
-.verTrailer {
-  width: 30vw;
-  margin-top: 20px;
+/* infoPelis detalles */
+.opciones, .btnsPelis {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 2vw;
+}
+.verTrailer, .btnFav {
+  width: 108px;
+  height: 37px;
   padding: 10px 20px;
   background-color: #7289da;
   border-radius: 5px;
   font-size: 16px;
   text-align: center;
+  color: #fff;
+  border: #5f73a1;
 }
-.verTrailer:hover {
+.verTrailer:hover, .btnFav:hover {
   background-color: #5f73a1;
 }
-/* infoPelis detalles */
-.otrosDetalles {
-  margin-top: 60px;
-}
-.opciones {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 4vw;
-}
 .detalles, .quizasGuste{
-  padding-bottom: 10px;
   cursor: pointer;
 }
 .seleccionado{
   font-weight: bold;
   border-bottom: 2px solid #7289da;
 }
-.contenidoOpcion{
+.opcVista{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 table{
-  width: 75vw;
+  width: 100%;
   padding: 3vw;
   text-align: center;
 }
@@ -193,7 +191,6 @@ td{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 8vw 0;
 }
 .peliculasSimilares img {
   width: 25vw;
@@ -205,6 +202,28 @@ td{
 }
 .peliculasSimilares img:hover {
   transform: scale(1.05);
+}
+/* listado favoritas */
+.contListaImg{
+  width: 100%;
+  padding: 5vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.lista li{
+  font-size: 4vw;
+  cursor: pointer;
+  transition: transform .3s;
+}
+.lista li:hover{
+  color: #7289da;
+  transform: scale(1.1);
+}
+.imgFav img{
+  width: 24vw;
+  height: 34vw;
+  border-radius: 5px;
 }
 /* puntos de quiebre */
 @media (width >= 481px) {
@@ -242,6 +261,8 @@ td{
     width: 30vw;
     height: 42vw;
   }
+  /* listado favoritas */
+
 }
 @media (width >= 768px) {
   h1 {
@@ -289,10 +310,11 @@ td{
   /* infoPelis */
   .contInfoPelis{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
   }
   .peliculaContainer{
-    padding: 10vw 1vw 1vw 1vw;
+    padding: 12vw 1vw 1vw 1vw;
     width: 40%;
   }
   .otrosDetalles{
@@ -328,5 +350,9 @@ td{
   }
   .opciones{
     padding: 2vw 4vw 2vw 4vw;
+  }
+  /* lista favoritas*/
+  .lista li{
+    font-size: 3vw;
   }
 }

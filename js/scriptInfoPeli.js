@@ -9,16 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const contenidoQuizasGuste = document.querySelector(".contenidoQuizasGuste");
 
   btnQuizasGuste.addEventListener("click", ()=> {
-    btnQuizasGuste.className = "seleccionado quizasGuste";
-    contenidoQuizasGuste.className = "contenidoOpcion";
-    btnDetalles.className = "opcion detalles";
+    btnQuizasGuste.classList.add("seleccionado");
+    btnDetalles.classList.remove("seleccionado");
+    contenidoQuizasGuste.className = "opcVista";
     contenidoDetalles.className = "oculto";
   });
   btnDetalles.addEventListener("click", ()=> {
-    btnDetalles.className = "seleccionado detalles";
-    contenidoDetalles.className = "contenidoOpcion";
-    btnQuizasGuste.className = "opcion quizasGuste";
+    btnDetalles.classList.add("seleccionado");
+    btnQuizasGuste.classList.remove("seleccionado");
     contenidoQuizasGuste.className = "oculto";
+    contenidoDetalles.className = "opcVista";
   });
-
-})
+});
