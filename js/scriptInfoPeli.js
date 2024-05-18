@@ -8,16 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const contenidoDetalles = document.querySelector(".contenidoDetalles");
   const contenidoQuizasGuste = document.querySelector(".contenidoQuizasGuste");
 
-  btnQuizasGuste.addEventListener("click", ()=> {
-    btnQuizasGuste.classList.add("seleccionado");
-    btnDetalles.classList.remove("seleccionado");
-    contenidoQuizasGuste.className = "opcVista";
-    contenidoDetalles.className = "oculto";
-  });
-  btnDetalles.addEventListener("click", ()=> {
-    btnDetalles.classList.add("seleccionado");
-    btnQuizasGuste.classList.remove("seleccionado");
-    contenidoQuizasGuste.className = "oculto";
-    contenidoDetalles.className = "opcVista";
-  });
+  function selecContenido(btn1, btn2, cont1, cont2){
+    btn1.addEventListener("click", ()=>{
+      btn1.classList.toggle("seleccionado");
+      btn2.classList.toggle("seleccionado");
+      cont1.classList.toggle("opcVista");
+      cont1.classList.toggle("oculto");
+      cont2.classList.toggle("opcVista");
+      cont2.classList.toggle("oculto");
+    })
+  }
+
+  selecContenido(btnDetalles, btnQuizasGuste, contenidoDetalles, contenidoQuizasGuste);
+  selecContenido(btnQuizasGuste, btnDetalles, contenidoQuizasGuste, contenidoDetalles);
+
 });

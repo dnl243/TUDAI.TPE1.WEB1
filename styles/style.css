@@ -30,7 +30,7 @@ body {
 h1 {
   font-size: 15vw;
 }
-.spanH1 {
+h1 span {
   color: #7989da;
 }
 /* ícono menu */
@@ -62,7 +62,7 @@ h1 {
 /* contenido principal */
 .peliPrincipal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-  url(https://cdn.colombia.com/sdi/2022/01/14/spider-man-no-way-home-nuevo-poster-mes-de-estreno-marvel-studios-sony-987506.jpg);
+    url(https://cdn.colombia.com/sdi/2022/01/14/spider-man-no-way-home-nuevo-poster-mes-de-estreno-marvel-studios-sony-987506.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,6 +103,22 @@ h4 {
 .contPeli img:hover {
   transform: scale(1.1);
 }
+/* tabla */
+table {
+  width: 100%;
+  padding: 1vw;
+  text-align: center;
+  table-layout: fixed;
+  font-size: 3vw;
+}
+th {
+  background-color: #7289da22;
+  border: 1px solid #7289da55;
+}
+td {
+  width: 3vw;
+  padding: 1vw;
+}
 /* preguntas frecuentes */
 .pregFrec {
   display: flex;
@@ -124,10 +140,13 @@ h4 {
   align-items: center;
 }
 /* infoPelis */
-.contInfoPelis{
+.contInfoPelis {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
 }
 .peliculaContainer {
   display: flex;
@@ -142,13 +161,30 @@ h4 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 /* infoPelis detalles */
-.opciones, .btnsPelis {
+.otrosDetalles {
+  width: 90vw;
+}
+.infoDetalle {
+  text-align: center;
+}
+.infoDetalle p {
+  padding: 1vw;
+}
+.info,
+.genero {
+  color: #ddda;
+}
+.genero {
+  font-style: italic;
+}
+.opciones,
+.btnsPelis {
   display: flex;
   justify-content: center;
   gap: 10px;
   padding: 2vw;
 }
-.verTrailer, .btnFav {
+.verTrailer {
   width: 108px;
   height: 37px;
   padding: 10px 20px;
@@ -159,35 +195,24 @@ h4 {
   color: #fff;
   border: #5f73a1;
 }
-.verTrailer:hover, .btnFav:hover {
+.verTrailer:hover {
   background-color: #5f73a1;
 }
-.detalles, .quizasGuste{
+.detalles,
+.quizasGuste {
   cursor: pointer;
 }
-.seleccionado{
+.seleccionado {
   font-weight: bold;
   border-bottom: 2px solid #7289da;
 }
-.opcVista{
+.opcVista {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-table{
-  width: 100%;
-  padding: 3vw;
-  text-align: center;
-}
-th{
-  background-color: #7289da22;
-  border: 1px solid #7289da55;
-}
-td{
-  padding: 1vw;
-}
-.peliculasSimilares{
+.peliculasSimilares {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,26 +229,137 @@ td{
   transform: scale(1.05);
 }
 /* listado favoritas */
-.contListaImg{
+.contListaImg {
   width: 100%;
   padding: 5vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.lista li{
+.lista li {
   font-size: 4vw;
   cursor: pointer;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
-.lista li:hover{
+.lista li:hover {
   color: #7289da;
   transform: scale(1.1);
 }
-.imgFav img{
+.imgFav img {
   width: 24vw;
   height: 34vw;
   border-radius: 5px;
+}
+/* formAcceso */
+.formAcceso {
+  padding: 8vw 0 0 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.formContenido{
+  width: 100%;
+  max-width: 450px;
+  background-color: transparent;
+  padding: 50px 60px 70px;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0px 0px 35px #0006;
+}
+.formContenido h1 {
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #eee;
+  position: relative;
+}
+.formContenido h1::after {
+  content: '';
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background-color:#7289da;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.inputCampo{
+  background-color: transparent;
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  transition: max-height 0.5s;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+input {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  padding: 18px 15px;
+  color: #eee;
+}
+.inputCampo:hover {
+  background-color: #3335;
+}
+input::placeholder {
+  color: #eee8;
+}
+.inputCampo i {
+  margin-left: 15px;
+  color: #7289da;
+}
+form p {
+  color: #eee;
+  text-align: center;
+  font-size: 13px;
+  padding: 1vw;
+}
+form span{
+  color: #7289da;
+}
+.btnCampo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btnCampo button {
+  flex-basis: 48%;
+  font-size: 16px;
+  background-color: #7289da;
+  color: #ffffff;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btnCampo button:hover{
+  background-color: #5067b8;
+}
+.inputGrupo {
+  height: 230px;
+}
+.btnCampo button.inactivo {
+  background-color: #eee;
+  color: black;
+}.contenedorCaptcha{
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#captchaInput{
+  text-align: center;
+}
+.captcha{
+  color: #eee;
 }
 /* puntos de quiebre */
 @media (width >= 481px) {
@@ -261,8 +397,6 @@ td{
     width: 30vw;
     height: 42vw;
   }
-  /* listado favoritas */
-
 }
 @media (width >= 768px) {
   h1 {
@@ -308,22 +442,32 @@ td{
     height: 31vw;
   }
   /* infoPelis */
-  .contInfoPelis{
+  .contInfoPelis {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
   }
-  .peliculaContainer{
+  .peliculaContainer {
     padding: 12vw 1vw 1vw 1vw;
     width: 40%;
   }
-  .otrosDetalles{
+  .otrosDetalles {
     margin-top: 10vw;
-    width: 40vw;
+    width: 55vw;
   }
-  .peliculasSimilares img{
+  .infoDetalle p,
+  .opciones span {
+    font-size: 2.5vw;
+  }
+  .peliculasSimilares img {
     width: 15vw;
     height: auto;
+  }
+  /* tabla info general*/
+  table {
+    padding: 0 10vw;
+    font-size: 2vw;
   }
 }
 @media (width >= 980px) {
@@ -345,14 +489,14 @@ td{
     width: 15vw;
     height: 22vw;
   }
-  .otrosDetalles{
+  .otrosDetalles {
     margin-top: 15vw;
   }
-  .opciones{
+  .opciones {
     padding: 2vw 4vw 2vw 4vw;
   }
   /* lista favoritas*/
-  .lista li{
+  .lista li {
     font-size: 3vw;
   }
 }
