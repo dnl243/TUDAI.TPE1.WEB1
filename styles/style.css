@@ -260,7 +260,7 @@ td {
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
 }
-.formContenido{
+.formContenido {
   width: 100%;
   max-width: 450px;
   background-color: transparent;
@@ -276,17 +276,17 @@ td {
   position: relative;
 }
 .formContenido h1::after {
-  content: '';
+  content: "";
   width: 30px;
   height: 4px;
   border-radius: 3px;
-  background-color:#7289da;
+  background-color: #7289da;
   position: absolute;
   bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
 }
-.inputCampo{
+.inputCampo {
   background-color: transparent;
   margin: 15px 0;
   border-radius: 3px;
@@ -295,6 +295,7 @@ td {
   transition: max-height 0.5s;
   overflow: hidden;
   border-bottom: 1px solid #eee;
+  width: 100%;
 }
 input {
   background-color: transparent;
@@ -319,8 +320,15 @@ form p {
   font-size: 13px;
   padding: 1vw;
 }
-form span{
+form span, #resultadoCaptcha, .respForm  {
   color: #7289da;
+}
+form p span:hover {
+  cursor: pointer;
+}
+.captchaInput:hover {
+  background-color: #3335;
+  border-radius: 10px;
 }
 .btnCampo {
   width: 100%;
@@ -337,29 +345,27 @@ form span{
   border: 0;
   outline: 0;
   cursor: pointer;
-  transition: background .2s;
+  transition: background 0.2s;
 }
-.btnCampo button:hover{
+.btnCampo button:hover {
   background-color: #5067b8;
 }
 .inputGrupo {
-  height: 230px;
+  height: 100%;
 }
-.btnCampo button.inactivo {
-  background-color: #eee;
-  color: black;
-}.contenedorCaptcha{
-  margin-top: 2vw;
+.contenedorCaptcha {
+  margin: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#captchaInput{
+#captchaInput {
   text-align: center;
 }
-.captcha{
+.captcha {
   color: #eee;
+  /* te */
 }
 /* puntos de quiebre */
 @media (width >= 481px) {

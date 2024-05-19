@@ -1,7 +1,8 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  function generateCaptcha() {
+  // form acceder
+  function generarCaptcha() {
     const characters =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     let captcha = "";
@@ -13,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
     return captcha;
   }
 
-  function initCaptcha() {
+  function iniciarCaptcha() {
     const captchaElement = document.getElementById("captcha");
-    captchaElement.textContent = generateCaptcha();
+    captchaElement.textContent = generarCaptcha();
   }
 
   document
@@ -26,12 +27,39 @@ document.addEventListener("DOMContentLoaded", function () {
       const captchaInput = document.getElementById("captchaInput").value;
 
       if (captchaInput === captchaElement) {
-        alert("CAPTCHA correcto. Formulario enviado.");
+        document.querySelector("#resultadoCaptcha").innerHTML =
+          "Código correcto. Acceso concedido.";
       } else {
-        alert("CAPTCHA incorrecto. Inténtalo de nuevo.");
-        initCaptcha();
+        document.querySelector("#resultadoCaptcha").innerHTML =
+          "Código incorrecto. Inténtalo de nuevo.";
+        iniciarCaptcha();
       }
     });
+  iniciarCaptcha();
 
-  initCaptcha;
+  const btnRecuperar = document.querySelector(".btnRecuperar");
+  const btnRegistrate = document.querySelector(".btnRegistrate");
+  const formAcceder = document.querySelector("#formAcceder");
+  const formRecuperar = document.querySelector("#formRecuperar");
+  const formRegistrar = document.querySelector("#formRegistrar");
+
+  function cambiarForm(btn, form) {
+    btn.addEventListener("click", () => {
+      formAcceder.classList.add("oculto");
+      form.classList.remove("oculto");
+    });
+  }
+
+  cambiarForm(btnRecuperar, formRecuperar); //click en recuperar
+  cambiarForm(btnRegistrate, formRegistrar); //click en registrate
+
+  // form recuperar y registrarse
+  document.querySelectorAll(".miFormRe").forEach((form) =>
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      document
+        .querySelectorAll(".respForm")
+        .forEach((p) => p.classList.remove("oculto"));
+    })
+  );
 });
