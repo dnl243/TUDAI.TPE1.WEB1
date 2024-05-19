@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const captchaElement = document.getElementById("captcha");
     captchaElement.textContent = generarCaptcha();
   }
+  iniciarCaptcha();
 
   document
     .getElementById("miForm")
@@ -35,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         iniciarCaptcha();
       }
     });
-  iniciarCaptcha();
 
   const btnRecuperar = document.querySelector(".btnRecuperar");
   const btnRegistrate = document.querySelector(".btnRegistrate");

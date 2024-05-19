@@ -1,7 +1,6 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
- 
   // icono menu
   const menuIcono = document.querySelector(".menuIcono");
 
@@ -19,12 +18,23 @@ document.addEventListener("DOMContentLoaded", function () {
     .forEach((e) => e.addEventListener("click", desplegar));
 
   //mostrar texto y cambiar "+" por "x" en preguntas frecuentes
-  document.querySelectorAll(".pregFrec").forEach(e => {
-    e.addEventListener("click", ()=> {
+  document.querySelectorAll(".pregFrec").forEach((e) => {
+    e.addEventListener("click", () => {
       e.nextElementSibling.classList.toggle("oculto");
       e.lastElementChild.classList.toggle("bi-plus");
       e.lastElementChild.classList.toggle("bi-x");
-    })
+    });
+  });
+
+  //modo oscuro/claro
+  function cambiarModo() {
+    document.querySelector("#linkCss").href = "styles/modoClaro.css";
+  }
+
+  const iconoModo = document.querySelector(".iconoModo");
+  iconoModo.addEventListener("click", ()=> {
+    iconoModo.classList.toggle("bi-moon-fill");
+    iconoModo.classList.toggle("bi-sun-fill");
+    // cambiarModo;
   });
 });
-

@@ -58,6 +58,10 @@ h1 span {
   color: #7989da;
   text-shadow: 0px 0px 15px #7989da;
 }
+.iconoModo:hover{
+  color: #7989da;
+  text-shadow: 0px 0px 15px #7989da;
+}
 /* main */
 /* contenido principal */
 .peliPrincipal {
@@ -365,7 +369,10 @@ form p span:hover {
 }
 .captcha {
   color: #eee;
-  /* te */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 /* puntos de quiebre */
 @media (width >= 481px) {
