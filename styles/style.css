@@ -102,7 +102,7 @@ h1 {
 }
 /* -- contenido secundario -- */
 .contSecundario h3,
-h4 {
+.contSecundario h4 {
   text-align: center;
   padding: 20vw 6vw 6vw 6vw;
   border-bottom: solid 3px #7989da55;
@@ -422,9 +422,6 @@ form p span:hover {
     width: 30vw;
     height: 42vw;
   }
-  #peliculas {
-    padding: 6vw;
-  }
 }
 @media (width >= 768px) {
   h1 {
@@ -469,8 +466,8 @@ form p span:hover {
     width: 23vw;
     height: 31vw;
   }
-  #peliculas {
-    padding: 15vw 6vw 6vw 6vw;
+  .contSecundario h3, .contSecundario h4 {
+    padding: 9vw 6vw 2vw 6vw;
   }
   /* infoPelis */
   .contInfoPelis {
