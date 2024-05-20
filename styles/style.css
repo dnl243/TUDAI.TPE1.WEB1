@@ -1,4 +1,4 @@
-/* propiedades generales */
+/* -- propiedades generales -- */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   padding: 0;
@@ -8,14 +8,37 @@
 }
 a {
   text-decoration: none;
-  color: #ddd;
 }
 body {
-  background-color: #222;
   font-family: "Bebas Neue", Courier, cursive;
-  color: #ddd;
 }
-/* header */
+/* -- valores de colores para modo oscuro -- */
+.bgPrimarioOscuro{
+  background-color: #333;
+}
+.bgSecundarioOscuro{
+  background-color: #4d5164dd;
+}
+.clOscuro{
+  color: #d3d9f9;
+}
+.destacadoOscuro{
+  color: #7989da;
+}
+/* -- valores de colores para modo claro -- */
+.bgPrimarioClaro{
+  background-color: #d3d9f9;
+}
+.bgSecundarioClaro{
+  background-color: #a3aeec;
+}
+.clClaro{
+  color: #333;
+}
+.destacadoClaro{
+  color: #394bac;
+}
+/* -- header -- */
 .cabecera {
   width: 100%;
   height: 15%;
@@ -26,29 +49,26 @@ body {
   position: fixed;
   z-index: 10;
 }
-/* nombre de página */
+/* -- nombre de página -- */
 h1 {
   font-size: 15vw;
 }
-h1 span {
-  color: #7989da;
-}
-/* ícono menu */
+/* -- ícono menu -- */
 #menuIcono {
   font-size: 15vw;
   margin-right: 3vw;
+  /* color: #d3d9f9; */
 }
 #menuIcono:hover {
-  text-shadow: 0px 0px 15px #ddd;
+  text-shadow: 0px 0px 15px #d3d9f9;
   cursor: pointer;
 }
-/* menu desplegable */
+/* -- menu desplegable -- */
 .menuDesplegable {
   font-size: 10vw;
   padding: 3vw;
   position: fixed;
   top: 20vw;
-  background-color: #4d5164dd;
   border-radius: 10px;
 }
 .oculto {
@@ -59,11 +79,12 @@ h1 span {
   text-shadow: 0px 0px 15px #7989da;
 }
 .iconoModo:hover{
+  cursor: pointer;
   color: #7989da;
   text-shadow: 0px 0px 15px #7989da;
 }
-/* main */
-/* contenido principal */
+/* -- main -- */
+/* -- contenido principal -- */
 .peliPrincipal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://cdn.colombia.com/sdi/2022/01/14/spider-man-no-way-home-nuevo-poster-mes-de-estreno-marvel-studios-sony-987506.jpg);
@@ -77,13 +98,13 @@ h1 span {
   justify-content: end;
   padding: 15vw;
   gap: 3vw;
+  color: #d3d9f9;
 }
-/* contenido secundario */
+/* -- contenido secundario -- */
 .contSecundario h3,
 h4 {
   text-align: center;
-  color: #7989daaa;
-  padding: 6vw;
+  padding: 20vw 6vw 6vw 6vw;
   border-bottom: solid 3px #7989da55;
 }
 .contGaleria {
@@ -107,7 +128,7 @@ h4 {
 .contPeli img:hover {
   transform: scale(1.1);
 }
-/* tabla */
+/* -- tabla -- */
 table {
   width: 100%;
   padding: 1vw;
@@ -122,8 +143,9 @@ th {
 td {
   width: 3vw;
   padding: 1vw;
+  border-bottom: 1px solid #7989da;
 }
-/* preguntas frecuentes */
+/* -- preguntas frecuentes -- */
 .pregFrec {
   display: flex;
   align-items: center;
@@ -134,7 +156,7 @@ td {
   text-align: justify;
   padding: 0 10vw 2vw 10vw;
 }
-/* footer */
+/* -- footer -- */
 .pieDePagina {
   text-align: center;
   padding: 5vw 0 2vw 0;
@@ -143,7 +165,7 @@ td {
   justify-content: center;
   align-items: center;
 }
-/* infoPelis */
+/* -- infoPelis -- */
 .contInfoPelis {
   font-family: Arial, sans-serif;
   display: flex;
@@ -164,7 +186,7 @@ td {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
-/* infoPelis detalles */
+/* -- infoPelis detalles -- */
 .otrosDetalles {
   width: 90vw;
 }
@@ -173,10 +195,6 @@ td {
 }
 .infoDetalle p {
   padding: 1vw;
-}
-.info,
-.genero {
-  color: #ddda;
 }
 .genero {
   font-style: italic;
@@ -196,7 +214,7 @@ td {
   border-radius: 5px;
   font-size: 16px;
   text-align: center;
-  color: #fff;
+  color: #ddd;
   border: #5f73a1;
 }
 .verTrailer:hover {
@@ -232,7 +250,7 @@ td {
 .peliculasSimilares img:hover {
   transform: scale(1.05);
 }
-/* listado favoritas */
+/* -- listado favoritas -- */
 .contListaImg {
   width: 100%;
   padding: 5vw;
@@ -254,7 +272,7 @@ td {
   height: 34vw;
   border-radius: 5px;
 }
-/* formAcceso */
+/* -- formAcceso -- */
 .formAcceso {
   padding: 8vw 0 0 0;
   width: 100%;
@@ -276,7 +294,6 @@ td {
 .formContenido h1 {
   font-size: 30px;
   margin-bottom: 60px;
-  color: #eee;
   position: relative;
 }
 .formContenido h1::after {
@@ -298,7 +315,7 @@ td {
   align-items: center;
   transition: max-height 0.5s;
   overflow: hidden;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #7989da;
   width: 100%;
 }
 input {
@@ -306,32 +323,27 @@ input {
   border: 0;
   outline: none;
   padding: 18px 15px;
-  color: #eee;
 }
 .inputCampo:hover {
-  background-color: #3335;
-}
-input::placeholder {
-  color: #eee8;
+  background-color: #8a8d9b33;
 }
 .inputCampo i {
   margin-left: 15px;
   color: #7289da;
 }
 form p {
-  color: #eee;
   text-align: center;
   font-size: 13px;
   padding: 1vw;
 }
-form span, #resultadoCaptcha, .respForm  {
-  color: #7289da;
+span {
+  font-weight: bold;
 }
 form p span:hover {
   cursor: pointer;
 }
 .captchaInput:hover {
-  background-color: #3335;
+  background-color: #8a8d9b33;
   border-radius: 10px;
 }
 .btnCampo {
@@ -343,7 +355,6 @@ form p span:hover {
   flex-basis: 48%;
   font-size: 16px;
   background-color: #7289da;
-  color: #ffffff;
   height: 40px;
   border-radius: 10px;
   border: 0;
@@ -368,13 +379,14 @@ form p span:hover {
   text-align: center;
 }
 .captcha {
-  color: #eee;
+  padding: 5px;
+  border: 1px solid #7989da;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-/* puntos de quiebre */
+/* -- puntos de quiebre -- */
 @media (width >= 481px) {
   h1 {
     font-size: 8vw;
@@ -409,6 +421,9 @@ form p span:hover {
   .contPeli img {
     width: 30vw;
     height: 42vw;
+  }
+  #peliculas {
+    padding: 6vw;
   }
 }
 @media (width >= 768px) {
@@ -453,6 +468,9 @@ form p span:hover {
   .contPeli img {
     width: 23vw;
     height: 31vw;
+  }
+  #peliculas {
+    padding: 15vw 6vw 6vw 6vw;
   }
   /* infoPelis */
   .contInfoPelis {
